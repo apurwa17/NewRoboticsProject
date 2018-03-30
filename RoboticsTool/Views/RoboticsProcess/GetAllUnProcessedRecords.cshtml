@@ -1,0 +1,78 @@
+﻿@model List<RoboticsToolData.Model.RoboticsUnProcessedModel>
+@{
+    ViewBag.Title = "GetAllUnProcessedRecords";
+    
+ }
+
+<head>
+    <link href="~/Content/ContentStyle.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<div class="row">
+    @using (Html.BeginForm("GetAllUnProcessedRecords", "RoboticsProcess", Model, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+      
+        <div style="margin-left:806px;">@Html.ActionLink("Export Invalid Data", "ExportToExcel", null, null, new { id = "btnexport", @class = "btn btn-primary" })</div>
+        <hr />
+          <div class="wrap">
+            <table class="head">
+                <tr>
+                    <td width="150px">AccountName</td>
+                    <td width="150px">ConnectionType</td>
+                    <td width="200px">SalesManager </td>
+                    <td width="150px">ReferenceNumber </td>
+                    <td width="150px">CreatedDate </td>
+                    <td width="150px">IsManualProcessed</td>
+                </tr>
+            </table>
+            <div class="inner_table">
+                <table>
+                    @if (Model.Count > 0)
+                    {
+                        for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td width="150px">
+                                  
+                                    @Html.HiddenFor(x=>Model[i].Id)
+                                    @Html.HiddenFor(x => Model[i].ConnectionType)
+                                    @Model[i].AccountName
+                                </td>
+                                <td width="150px">
+                                    @Model[i].ConnectionType
+                                </td>
+                                <td width="200px">
+                                    @Model[i].SalesManager
+                                </td>
+                                <td width="150px">
+                                    @Model[i].ReferenceNumber
+                                </td>
+                                <td width="150px">
+                                    @Model[i].CreatedDate
+                                </td>
+                                <td width="150px">
+                                
+                                    @Html.CheckBoxFor(x => Model[i].IsManualProcessed)
+                                  
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td> Data is not available to process</td></tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <br />
+        <input type="submit" id="btnProcessData" value="Process Data in Robotic Format" class="btn btn-primary" />        <br />
+        <div style="font-weight:bold;color:red;font-size:14px"> @if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            @Html.Raw(ViewBag.Message)
+        }</div>
+
+    }
+
+  </div>

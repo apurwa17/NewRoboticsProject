@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoboticDataModelStoreContainer" CdmEntityContainer="RoboticDataEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RoboticDataModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSourceFileDetails">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblSourceFileDetail">
+        <MappingFragment StoreEntitySet="tblSourceFileDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserDetails">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblUserDetail">
+        <MappingFragment StoreEntitySet="tblUserDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAddCTNs">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblAddCTN">
+        <MappingFragment StoreEntitySet="tblAddCTN">
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+          <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+          <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+          <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+          <ScalarProperty Name="CommitmentStartDate" ColumnName="CommitmentStartDate" />
+          <ScalarProperty Name="CommitmentLength" ColumnName="CommitmentLength" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAirtimeCredits">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblAirtimeCredit">
+        <MappingFragment StoreEntitySet="tblAirtimeCredit">
+          <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+          <ScalarProperty Name="HardwareBAN" ColumnName="HardwareBAN" />
+          <ScalarProperty Name="AirtimeBAN" ColumnName="AirtimeBAN" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHardwareCredits">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblHardwareCredit">
+        <MappingFragment StoreEntitySet="tblHardwareCredit">
+          <ScalarProperty Name="HardwareBAN" ColumnName="HardwareBAN" />
+          <ScalarProperty Name="AirtimeBAN" ColumnName="AirtimeBAN" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAddCTNWithHardwares">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblAddCTNWithHardware">
+        <MappingFragment StoreEntitySet="tblAddCTNWithHardware">
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+          <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+          <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+          <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+          <ScalarProperty Name="CommitmentStartDate" ColumnName="CommitmentStartDate" />
+          <ScalarProperty Name="CommitmentLength" ColumnName="CommitmentLength" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblInvalidDatas">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblInvalidData">
+        <MappingFragment StoreEntitySet="tblInvalidData">
+          <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+          <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+          <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+          <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+          <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+          <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+          <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+          <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+          <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+          <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+          <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+          <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblResigns">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblResign">
+        <MappingFragment StoreEntitySet="tblResign">
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+          <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+          <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblResignWithHardwares">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblResignWithHardware">
+        <MappingFragment StoreEntitySet="tblResignWithHardware">
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+          <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+          <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+          <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+          <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+          <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+          <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+          <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+          <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+          <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+          <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+          <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+          <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+          <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+          <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+          <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+          <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+          <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+          <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+          <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+          <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+          <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+          <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+          <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+          <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+          <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+          <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+          <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+          <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+          <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+          <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+          <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+          <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+          <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+          <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+          <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+          <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+          <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+          <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+          <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+          <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+          <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+          <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+          <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+          <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+          <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+          <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+          <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+          <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+          <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+          <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHardwareOnlies">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblHardwareOnly">
+        <MappingFragment StoreEntitySet="tblHardwareOnly">
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+          <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+          <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+          <ScalarProperty Name="Subscription" ColumnName="Subscription" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+          <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+          <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+          <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+          <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+          <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+          <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+          <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+          <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+          <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblInvalidHardwareOnlies">
+      <EntityTypeMapping TypeName="RoboticDataModel.tblInvalidHardwareOnly">
+        <MappingFragment StoreEntitySet="tblInvalidHardwareOnly">
+          <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+          <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+          <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+          <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+          <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+          <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+          <ScalarProperty Name="Subscription" ColumnName="Subscription" />
+          <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+          <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+          <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+          <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+          <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+          <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+          <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+          <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+          <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+          <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+          <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+          <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+          <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="CTN" ColumnName="CTN" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

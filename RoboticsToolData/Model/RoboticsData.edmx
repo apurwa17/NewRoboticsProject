@@ -1,0 +1,2214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RoboticDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblAddCTN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommitmentLength" Type="int" />
+          <Property Name="CommitmentStartDate" Type="datetime" />
+          <Property Name="InternationalBarRemove" Type="bit" />
+          <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblAddCTNWithHardware">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="MissingInformation" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommitmentLength" Type="int" />
+          <Property Name="CommitmentStartDate" Type="datetime" />
+          <Property Name="InternationalBarRemove" Type="bit" />
+          <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblAirtimeCredit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="AirtimeBAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareBAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblHardwareCredit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="AirtimeBAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareBAN" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblHardwareOnly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+          <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AdditionalComments" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="Subscription" Type="datetime" />
+          <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblInvalidData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="MissingInformation" Type="nvarchar(max)" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareSLP" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+          <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+          <Property Name="AdditionalComments" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tblInvalidHardwareOnly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+          <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AdditionalComments" Type="nvarchar(max)" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="Subscription" Type="datetime" />
+          <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsProcess" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblResign">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="MissingInformation" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="InternationalBarRemove" Type="bit" />
+          <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblResignWithHardware">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+          <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+          <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+          <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PortDate" Type="datetime" />
+          <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+          <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+          <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+          <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+          <Property Name="MissingInformation" Type="nvarchar(max)" />
+          <Property Name="IsProcess" Type="bit" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsManualProcessed" Type="bit" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReferenceNumber" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ProcessDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+          <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+          <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="InternationalBarRemove" Type="bit" />
+          <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tblSourceFileDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="varchar" MaxLength="500" />
+          <Property Name="ProcessDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblUserDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="250" />
+          <Property Name="Email" Type="varchar" MaxLength="250" />
+          <Property Name="EmpID" Type="int" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="PasswordSalt" Type="nvarchar" MaxLength="500" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="500" />
+          <Property Name="UpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="RoboticDataModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAddCTN" EntityType="Self.tblAddCTN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAddCTNWithHardware" EntityType="Self.tblAddCTNWithHardware" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAirtimeCredit" EntityType="Self.tblAirtimeCredit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblHardwareCredit" EntityType="Self.tblHardwareCredit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblHardwareOnly" EntityType="Self.tblHardwareOnly" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblInvalidData" EntityType="Self.tblInvalidData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblInvalidHardwareOnly" EntityType="Self.tblInvalidHardwareOnly" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblResign" EntityType="Self.tblResign" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblResignWithHardware" EntityType="Self.tblResignWithHardware" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSourceFileDetails" EntityType="Self.tblSourceFileDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserDetails" EntityType="Self.tblUserDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RoboticDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblSourceFileDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblUserDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="EmpID" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordSalt" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="PasswordHash" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="RoboticDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="tblSourceFileDetails" EntityType="Self.tblSourceFileDetail" />
+          <EntitySet Name="tblUserDetails" EntityType="Self.tblUserDetail" />
+          <EntitySet Name="tblAddCTNs" EntityType="RoboticDataModel.tblAddCTN" />
+          <EntitySet Name="tblAirtimeCredits" EntityType="RoboticDataModel.tblAirtimeCredit" />
+          <EntitySet Name="tblHardwareCredits" EntityType="RoboticDataModel.tblHardwareCredit" />
+          <EntitySet Name="tblAddCTNWithHardwares" EntityType="RoboticDataModel.tblAddCTNWithHardware" />
+          <EntitySet Name="tblInvalidDatas" EntityType="RoboticDataModel.tblInvalidData" />
+          <EntitySet Name="tblResigns" EntityType="RoboticDataModel.tblResign" />
+          <EntitySet Name="tblResignWithHardwares" EntityType="RoboticDataModel.tblResignWithHardware" />
+          <EntitySet Name="tblHardwareOnlies" EntityType="RoboticDataModel.tblHardwareOnly" />
+          <EntitySet Name="tblInvalidHardwareOnlies" EntityType="RoboticDataModel.tblInvalidHardwareOnly" />
+        </EntityContainer>
+        <EntityType Name="tblAddCTN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommitmentLength" Type="Int32" />
+          <Property Name="CommitmentStartDate" Type="DateTime" Precision="3" />
+          <Property Name="InternationalBarRemove" Type="Boolean" />
+          <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblAirtimeCredit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AirtimeBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblHardwareCredit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AirtimeBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblAddCTNWithHardware">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommitmentLength" Type="Int32" />
+          <Property Name="CommitmentStartDate" Type="DateTime" Precision="3" />
+          <Property Name="InternationalBarRemove" Type="Boolean" />
+          <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblInvalidData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareSLP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblResign">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="InternationalBarRemove" Type="Boolean" />
+          <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblResignWithHardware">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PortDate" Type="DateTime" Precision="3" />
+          <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="InternationalBarRemove" Type="Boolean" />
+          <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblHardwareOnly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Subscription" Type="DateTime" Precision="3" />
+          <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblInvalidHardwareOnly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareSLP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsManualProcessed" Type="Boolean" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReferenceNumber" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Subscription" Type="DateTime" Precision="3" />
+          <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsProcess" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RoboticDataModelStoreContainer" CdmEntityContainer="RoboticDataEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="RoboticDataModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSourceFileDetails">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblSourceFileDetail">
+              <MappingFragment StoreEntitySet="tblSourceFileDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserDetails">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblUserDetail">
+              <MappingFragment StoreEntitySet="tblUserDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAddCTNs">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblAddCTN">
+              <MappingFragment StoreEntitySet="tblAddCTN">
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+                <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+                <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+                <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+                <ScalarProperty Name="CommitmentStartDate" ColumnName="CommitmentStartDate" />
+                <ScalarProperty Name="CommitmentLength" ColumnName="CommitmentLength" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAirtimeCredits">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblAirtimeCredit">
+              <MappingFragment StoreEntitySet="tblAirtimeCredit">
+                <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+                <ScalarProperty Name="HardwareBAN" ColumnName="HardwareBAN" />
+                <ScalarProperty Name="AirtimeBAN" ColumnName="AirtimeBAN" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHardwareCredits">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblHardwareCredit">
+              <MappingFragment StoreEntitySet="tblHardwareCredit">
+                <ScalarProperty Name="HardwareBAN" ColumnName="HardwareBAN" />
+                <ScalarProperty Name="AirtimeBAN" ColumnName="AirtimeBAN" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAddCTNWithHardwares">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblAddCTNWithHardware">
+              <MappingFragment StoreEntitySet="tblAddCTNWithHardware">
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+                <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+                <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+                <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+                <ScalarProperty Name="CommitmentStartDate" ColumnName="CommitmentStartDate" />
+                <ScalarProperty Name="CommitmentLength" ColumnName="CommitmentLength" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblInvalidDatas">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblInvalidData">
+              <MappingFragment StoreEntitySet="tblInvalidData">
+                <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+                <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+                <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+                <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+                <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+                <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+                <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+                <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+                <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+                <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+                <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+                <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblResigns">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblResign">
+              <MappingFragment StoreEntitySet="tblResign">
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+                <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+                <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblResignWithHardwares">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblResignWithHardware">
+              <MappingFragment StoreEntitySet="tblResignWithHardware">
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="AccessoryCharge" ColumnName="AccessoryCharge" />
+                <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+                <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+                <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+                <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+                <ScalarProperty Name="InternationalBarRemove" ColumnName="InternationalBarRemove" />
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+                <ScalarProperty Name="HWSLP" ColumnName="HWSLP" />
+                <ScalarProperty Name="HWBrand" ColumnName="HWBrand" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="MissingInformation" ColumnName="MissingInformation" />
+                <ScalarProperty Name="ProcessMethod" ColumnName="ProcessMethod" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="ChargingAccount" ColumnName="ChargingAccount" />
+                <ScalarProperty Name="SimSize" ColumnName="SimSize" />
+                <ScalarProperty Name="HWCharge" ColumnName="HWCharge" />
+                <ScalarProperty Name="HWModel" ColumnName="HWModel" />
+                <ScalarProperty Name="BuyOutCredit" ColumnName="BuyOutCredit" />
+                <ScalarProperty Name="AirtimeFund" ColumnName="AirtimeFund" />
+                <ScalarProperty Name="HardwareFund" ColumnName="HardwareFund" />
+                <ScalarProperty Name="SOC10Discount" ColumnName="SOC10Discount" />
+                <ScalarProperty Name="SOC10Charge" ColumnName="SOC10Charge" />
+                <ScalarProperty Name="SOC10Code" ColumnName="SOC10Code" />
+                <ScalarProperty Name="SOC9Discount" ColumnName="SOC9Discount" />
+                <ScalarProperty Name="SOC9Charge" ColumnName="SOC9Charge" />
+                <ScalarProperty Name="SOC9Code" ColumnName="SOC9Code" />
+                <ScalarProperty Name="SOC8Discount" ColumnName="SOC8Discount" />
+                <ScalarProperty Name="SOC8Charge" ColumnName="SOC8Charge" />
+                <ScalarProperty Name="SOC8Code" ColumnName="SOC8Code" />
+                <ScalarProperty Name="SOC7Discount" ColumnName="SOC7Discount" />
+                <ScalarProperty Name="SOC7Charge" ColumnName="SOC7Charge" />
+                <ScalarProperty Name="SOC7Code" ColumnName="SOC7Code" />
+                <ScalarProperty Name="SOC6Discount" ColumnName="SOC6Discount" />
+                <ScalarProperty Name="SOC6Charge" ColumnName="SOC6Charge" />
+                <ScalarProperty Name="SOC6Code" ColumnName="SOC6Code" />
+                <ScalarProperty Name="SOC5Discount" ColumnName="SOC5Discount" />
+                <ScalarProperty Name="SOC5Charge" ColumnName="SOC5Charge" />
+                <ScalarProperty Name="SOC5Code" ColumnName="SOC5Code" />
+                <ScalarProperty Name="SOC4Discount" ColumnName="SOC4Discount" />
+                <ScalarProperty Name="SOC4Charge" ColumnName="SOC4Charge" />
+                <ScalarProperty Name="SOC4Code" ColumnName="SOC4Code" />
+                <ScalarProperty Name="SOC3Discount" ColumnName="SOC3Discount" />
+                <ScalarProperty Name="SOC3Charge" ColumnName="SOC3Charge" />
+                <ScalarProperty Name="SOC3Code" ColumnName="SOC3Code" />
+                <ScalarProperty Name="SOC2Discount" ColumnName="SOC2Discount" />
+                <ScalarProperty Name="SOC2Charge" ColumnName="SOC2Charge" />
+                <ScalarProperty Name="SOC2Code" ColumnName="SOC2Code" />
+                <ScalarProperty Name="SOC1Discount" ColumnName="SOC1Discount" />
+                <ScalarProperty Name="SOC1Charge" ColumnName="SOC1Charge" />
+                <ScalarProperty Name="SOC1Code" ColumnName="SOC1Code" />
+                <ScalarProperty Name="DiscountLength" ColumnName="DiscountLength" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ContractLength" ColumnName="ContractLength" />
+                <ScalarProperty Name="LineRental" ColumnName="LineRental" />
+                <ScalarProperty Name="VoiceData" ColumnName="VoiceData" />
+                <ScalarProperty Name="TariffCode" ColumnName="TariffCode" />
+                <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+                <ScalarProperty Name="PortDate" ColumnName="PortDate" />
+                <ScalarProperty Name="PACCode" ColumnName="PACCode" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="UniqueRef" ColumnName="UniqueRef" />
+                <ScalarProperty Name="SFOpportunityRef" ColumnName="SFOpportunityRef" />
+                <ScalarProperty Name="EntityKey" ColumnName="EntityKey" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHardwareOnlies">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblHardwareOnly">
+              <MappingFragment StoreEntitySet="tblHardwareOnly">
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+                <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+                <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+                <ScalarProperty Name="Subscription" ColumnName="Subscription" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+                <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+                <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+                <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+                <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+                <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+                <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+                <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+                <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+                <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblInvalidHardwareOnlies">
+            <EntityTypeMapping TypeName="RoboticDataModel.tblInvalidHardwareOnly">
+              <MappingFragment StoreEntitySet="tblInvalidHardwareOnly">
+                <ScalarProperty Name="IsProcess" ColumnName="IsProcess" />
+                <ScalarProperty Name="ExistingSIMNo" ColumnName="ExistingSIMNo" />
+                <ScalarProperty Name="SimCardSKUCode" ColumnName="SimCardSKUCode" />
+                <ScalarProperty Name="AccessoryVariant" ColumnName="AccessoryVariant" />
+                <ScalarProperty Name="AccessorySKU" ColumnName="AccessorySKU" />
+                <ScalarProperty Name="HardwareSKUCode" ColumnName="HardwareSKUCode" />
+                <ScalarProperty Name="Subscription" ColumnName="Subscription" />
+                <ScalarProperty Name="ConnectionType" ColumnName="ConnectionType" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IsManualProcessed" ColumnName="IsManualProcessed" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+                <ScalarProperty Name="ChargingAccountHardwareORAirtime" ColumnName="ChargingAccountHardwareORAirtime" />
+                <ScalarProperty Name="AccessoryCost" ColumnName="AccessoryCost" />
+                <ScalarProperty Name="AccessoryDescription" ColumnName="AccessoryDescription" />
+                <ScalarProperty Name="HardwareColourVariant" ColumnName="HardwareColourVariant" />
+                <ScalarProperty Name="SimCardSize" ColumnName="SimCardSize" />
+                <ScalarProperty Name="SimCardRequired" ColumnName="SimCardRequired" />
+                <ScalarProperty Name="HardwareCharge" ColumnName="HardwareCharge" />
+                <ScalarProperty Name="HardwareSLP" ColumnName="HardwareSLP" />
+                <ScalarProperty Name="HardwareVariant" ColumnName="HardwareVariant" />
+                <ScalarProperty Name="HardwareBrand" ColumnName="HardwareBrand" />
+                <ScalarProperty Name="SalesManager" ColumnName="SalesManager" />
+                <ScalarProperty Name="NTLogin" ColumnName="NTLogin" />
+                <ScalarProperty Name="BAN" ColumnName="BAN" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CTN" ColumnName="CTN" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoboticDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblAddCTN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="CommitmentLength" Type="int" />
+    <Property Name="CommitmentStartDate" Type="datetime" />
+    <Property Name="InternationalBarRemove" Type="bit" />
+    <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblAddCTNWithHardware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="MissingInformation" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="CommitmentLength" Type="int" />
+    <Property Name="CommitmentStartDate" Type="datetime" />
+    <Property Name="InternationalBarRemove" Type="bit" />
+    <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblAirtimeCredit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="AirtimeBAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareBAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblHardwareCredit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="AirtimeBAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareBAN" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblHardwareOnly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+    <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AdditionalComments" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="Subscription" Type="datetime" />
+    <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblInvalidData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="MissingInformation" Type="nvarchar(max)" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareSLP" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+    <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdditionalComments" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblInvalidHardwareOnly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareColourVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryDescription" Type="nvarchar(max)" />
+    <Property Name="AccessoryCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AdditionalComments" Type="nvarchar(max)" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="Subscription" Type="datetime" />
+    <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsProcess" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblResign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="MissingInformation" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="InternationalBarRemove" Type="bit" />
+    <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblResignWithHardware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SalesManager" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EntityKey" Type="nvarchar" MaxLength="500" />
+    <Property Name="SFOpportunityRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="UniqueRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConnectionType" Type="nvarchar" MaxLength="500" />
+    <Property Name="CTN" Type="nvarchar" MaxLength="500" />
+    <Property Name="PACCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="PortDate" Type="datetime" />
+    <Property Name="Tariff" Type="nvarchar" MaxLength="500" />
+    <Property Name="TariffCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="VoiceData" Type="nvarchar" MaxLength="500" />
+    <Property Name="LineRental" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContractLength" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC1Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC2Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC3Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC4Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC5Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC6Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC7Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC8Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC9Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="nvarchar" MaxLength="500" />
+    <Property Name="SOC10Charge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="nvarchar" MaxLength="500" />
+    <Property Name="ChargingAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryType" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="nvarchar(max)" />
+    <Property Name="ProcessMethod" Type="nvarchar" MaxLength="500" />
+    <Property Name="MissingInformation" Type="nvarchar(max)" />
+    <Property Name="IsProcess" Type="bit" />
+    <Property Name="IsValid" Type="bit" />
+    <Property Name="IsManualProcessed" Type="bit" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceNumber" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ProcessDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="HWBrand" Type="nvarchar" MaxLength="500" />
+    <Property Name="HWSLP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="nvarchar" MaxLength="500" />
+    <Property Name="BAN" Type="nvarchar" MaxLength="500" />
+    <Property Name="InternationalBarRemove" Type="bit" />
+    <Property Name="HardwareSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="HardwareVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessorySKU" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryVariant" Type="nvarchar" MaxLength="500" />
+    <Property Name="AccessoryCharge" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExistingSIMNo" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblSourceFileDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="500" />
+    <Property Name="ProcessDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="500" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="500" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="RoboticDataModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAddCTN" EntityType="Self.tblAddCTN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAddCTNWithHardware" EntityType="Self.tblAddCTNWithHardware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAirtimeCredit" EntityType="Self.tblAirtimeCredit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHardwareCredit" EntityType="Self.tblHardwareCredit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHardwareOnly" EntityType="Self.tblHardwareOnly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblInvalidData" EntityType="Self.tblInvalidData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblInvalidHardwareOnly" EntityType="Self.tblInvalidHardwareOnly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblResign" EntityType="Self.tblResign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblResignWithHardware" EntityType="Self.tblResignWithHardware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSourceFileDetails" EntityType="Self.tblSourceFileDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserDetails" EntityType="Self.tblUserDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

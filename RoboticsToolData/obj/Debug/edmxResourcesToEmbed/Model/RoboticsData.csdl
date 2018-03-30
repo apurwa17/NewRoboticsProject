@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoboticDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblSourceFileDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUserDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EmpID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="PasswordHash" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="RoboticDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tblSourceFileDetails" EntityType="Self.tblSourceFileDetail" />
+    <EntitySet Name="tblUserDetails" EntityType="Self.tblUserDetail" />
+    <EntitySet Name="tblAddCTNs" EntityType="RoboticDataModel.tblAddCTN" />
+    <EntitySet Name="tblAirtimeCredits" EntityType="RoboticDataModel.tblAirtimeCredit" />
+    <EntitySet Name="tblHardwareCredits" EntityType="RoboticDataModel.tblHardwareCredit" />
+    <EntitySet Name="tblAddCTNWithHardwares" EntityType="RoboticDataModel.tblAddCTNWithHardware" />
+    <EntitySet Name="tblInvalidDatas" EntityType="RoboticDataModel.tblInvalidData" />
+    <EntitySet Name="tblResigns" EntityType="RoboticDataModel.tblResign" />
+    <EntitySet Name="tblResignWithHardwares" EntityType="RoboticDataModel.tblResignWithHardware" />
+    <EntitySet Name="tblHardwareOnlies" EntityType="RoboticDataModel.tblHardwareOnly" />
+    <EntitySet Name="tblInvalidHardwareOnlies" EntityType="RoboticDataModel.tblInvalidHardwareOnly" />
+  </EntityContainer>
+  <EntityType Name="tblAddCTN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommitmentLength" Type="Int32" />
+    <Property Name="CommitmentStartDate" Type="DateTime" Precision="3" />
+    <Property Name="InternationalBarRemove" Type="Boolean" />
+    <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAirtimeCredit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AirtimeBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHardwareCredit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AirtimeBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareBAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAddCTNWithHardware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommitmentLength" Type="Int32" />
+    <Property Name="CommitmentStartDate" Type="DateTime" Precision="3" />
+    <Property Name="InternationalBarRemove" Type="Boolean" />
+    <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblInvalidData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareSLP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblResign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InternationalBarRemove" Type="Boolean" />
+    <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblResignWithHardware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityKey" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SFOpportunityRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UniqueRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PACCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PortDate" Type="DateTime" Precision="3" />
+    <Property Name="Tariff" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TariffCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VoiceData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LineRental" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLength" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountLength" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC1Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC1Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC2Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC2Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC3Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC3Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC4Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC4Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC5Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC5Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC6Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC6Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC7Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC7Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC8Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC8Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC9Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC9Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SOC10Charge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SOC10Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AirtimeFund" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BuyOutCredit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HWModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ChargingAccount" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MissingInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="HWBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HWSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InternationalBarRemove" Type="Boolean" />
+    <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHardwareOnly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Subscription" Type="DateTime" Precision="3" />
+    <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblInvalidHardwareOnly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CTN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BAN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SalesManager" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareBrand" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareSLP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HardwareCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimCardRequired" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="HardwareColourVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChargingAccountHardwareORAirtime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdditionalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsValid" Type="Boolean" />
+    <Property Name="IsManualProcessed" Type="Boolean" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceNumber" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="ConnectionType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Subscription" Type="DateTime" Precision="3" />
+    <Property Name="HardwareSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessorySKU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccessoryVariant" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SimCardSKUCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExistingSIMNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsProcess" Type="Boolean" />
+  </EntityType>
+</Schema>

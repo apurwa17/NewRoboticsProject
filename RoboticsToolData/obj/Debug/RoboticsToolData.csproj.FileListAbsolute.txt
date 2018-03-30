@@ -1,0 +1,9 @@
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\RoboticsToolData.dll.config
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\RoboticsToolData.dll
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\RoboticsToolData.pdb
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\EntityFramework.dll
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\EntityFramework.xml
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\obj\Debug\RoboticsToolData.dll
+C:\Users\solankis3\documents\visual studio 2015\Projects\RoboticsTool\RoboticsToolData\obj\Debug\RoboticsToolData.pdb

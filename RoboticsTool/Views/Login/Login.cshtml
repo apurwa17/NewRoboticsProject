@@ -1,0 +1,91 @@
+﻿@model RoboticsTool.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <style>
+      .loginbody {
+          background-image: url('../Content/Images/CMS_Back.png');
+          background-size: cover;
+      }
+  </style>
+    <title>Login</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/ContentStyle.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body class="loginbody" style="background-image: url('../Content/Images/images536AK3I2.jpg'); " >
+
+    @using (Html.BeginForm("Login", "Login", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+            <div class="accountInfo">
+                <div class="panel panel-default">
+                    <div class="panel-heading panellogin">
+                        <p class="loginp">Sign in </p>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <table style="width: 85%">
+                                <tr>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" style="vertical-align: top">
+                                        Email Id:
+                                        <label class="field-validation-error">*</label>
+                                    </td>
+                                    <td width="60%">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "field-validation-error" })
+                                        @*<asp:TextBox ID="txtUserName" CssClass="form-control textEntrylogin" runat="server"></asp:TextBox><br />
+                                        <asp:RequiredFieldValidator ID="rfvtxtUserName" Display="Dynamic" ErrorMessage="Employee ID is required" runat="server" ControlToValidate="txtUserName" CssClass="field-validation-error"></asp:RequiredFieldValidator>*@
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top">
+                                        Password:
+                                        <label class="field-validation-error">
+                                            *
+                                        </label>
+                                    </td>
+                                    <td>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "field-validation-error" })
+                                        @*<asp:TextBox runat="server" ID="txtPassword" CssClass="form-control textEntrylogin" TextMode="Password"></asp:TextBox><br />
+                                        <asp:RequiredFieldValidator ID="rfvtxtPassword" Display="Dynamic" ErrorMessage="Password is required" CssClass="field-validation-error" runat="server" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>*@
+                                    </td>
+                                </tr>
+                              @if(ViewBag.LoginMessage!=null)
+                              {
+                                  <tr><td></td><td><span class="field-validation-error">@ViewBag.LoginMessage</span></td></tr>
+                              }
+
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <p class="loginbtndiv">
+                                            <input type="submit" id="btnLogin" value="Login" class="btn btn-primary" />
+
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+
+    </body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+</html>
